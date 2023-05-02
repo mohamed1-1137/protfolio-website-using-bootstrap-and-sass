@@ -1,0 +1,46 @@
+@use "../custom" as *;
+@use "./mixins" as *;
+
+.btn-tele{
+    @include media-breakpoint-down(sm){
+        display: none;
+    }
+    border:none;
+    padding: .9375rem 4.375rem .9375rem 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    border:.1rem solid rgba($white,.6);
+    position: relative;
+    background-color: $white;
+
+    span{
+        width:2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        background-color: $primary;
+        position: absolute;
+        top:50%;
+        right:5px;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        i{
+            color:$white;
+            line-height: 2.5rem;
+            font-size: 1rem;
+        }
+}
+&:hover{
+    @include gradient;
+    color:$white;
+    span{
+        background-color: rgba($black,.6);
+    }
+}
+}

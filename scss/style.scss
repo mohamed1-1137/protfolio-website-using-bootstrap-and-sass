@@ -1,0 +1,22 @@
+
+// impot custom.scss file
+@use 'custom';
+
+// import compontents
+@use "./components/animation";
+@use "./components/buttons";
+@use "./components/mixins";
+@use "./components/typography";
+
+// import sections
+@use "./sections/navbar";
+@use "./sections/intro";
+@use "./sections/companies";
+@use "./sections/services";
+@use "./sections/testimonials";
+@use "./sections/FAQ";
+@use "./sections/portfolio";
+@use "./sections/get-started";
+@use "./sections/footer";
+
+

@@ -1,0 +1,98 @@
+@use "../custom" as *;
+@use "./mixins" as *;
+
+
+.display-2{
+    margin-bottom:1rem;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+&--intro{
+    font-weight: 800;
+}
+&--description{
+    font-size:1.3rem;
+    display: block;
+    margin-top:2rem;
+}
+}
+
+//companiese 
+
+// heading text
+.heading-line{
+    position: relative;
+    margin-bottom: 4rem;
+}
+.heading-line::before{
+    content:"";
+    @include gradient;
+    width:10rem;
+    height:.1rem;
+    bottom:-.8rem;
+    left:50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    position: absolute;
+}
+.heading-line::after {
+    content: "";
+    background-color: $primary;
+    width: 2rem;
+    height: .3rem;
+    bottom: -1.1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    position: absolute;
+}
+
+// display-3
+.display-3{
+    font-family: 'Poppins', sans-serif;
+}
+
+// border-right
+.border-right{
+    border-right: 1px solid $gray-400;
+    @include media-breakpoint-down(md){
+    border-right: none;
+    border-bottom: 1px solid $gray-400;
+    width:80%;
+    margin:auto;
+    }
+}
+
+//services title
+.seriveces-name{
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    background-image: linear-gradient(to right,$primary,$secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent ;
+}
+
+//testimonials
+.testimonials {
+    font-family: sans-serif;
+    .head {
+        letter-spacing: .06rem;
+    }
+}
+
+// get-started
+.get-started{
+    .input-title{
+        display: inline-block;
+        background-image: linear-gradient(to right, $primary, $secondary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+    }
+}

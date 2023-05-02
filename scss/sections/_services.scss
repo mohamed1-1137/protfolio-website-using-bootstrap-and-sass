@@ -1,0 +1,6 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.our-services{
+    @include padding-sectinos;
+}
